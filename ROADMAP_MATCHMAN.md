@@ -1,6 +1,13 @@
 # Workmap (feuille de route) — Plateforme de rencontre orientée « profils hommes visibles, abonnement femme »
 
 ## 0) Vision produit
+
+## 0.1 Mise à jour roadmap (état actuel du repo)
+- ✅ **Server/Web Python** : base FastAPI opérationnelle pour auth, découverte, match et conversation.
+- ✅ **Database intégrée au server** : passage du stockage mémoire à une base SQLite via SQLAlchemy (point d'entrée serveur prêt pour évoluer vers PostgreSQL).
+- 🔄 **Prochaine priorité** : consolider les modules Server séparés (`server/`) et préparer migrations Alembic + endpoints API dédiés.
+- ⏳ **À venir** : Stripe, modération, Android Kivy.
+
 Créer une plateforme de rencontre où :
 - **Les hommes** créent et enrichissent leur profil (username, photos, vidéos, bio, goûts), publient des mini-annonces, puis attendent les matchs.
 - **Les femmes** paient un abonnement Stripe pour consulter les profils hommes de leur ville/région, initier un match, puis discuter.
@@ -151,6 +158,8 @@ Tables principales :
 ## 6) Plan de livraison par phases
 
 ## Phase 1 — Fondations (2 à 3 semaines)
+- ✅ Setup initial web FastAPI livré dans le repo
+- ✅ Base de données locale branchée au serveur (SQLAlchemy + SQLite)
 - Setup repo mono-projet : `server/`, `web/`, `android_kivy/`
 - Authentification + rôles
 - Schéma DB initial + migrations
