@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+  <h2>Conversation privée</h2>
+  <p><strong>{{ conversation.woman_name }}</strong> ↔ <strong>{{ conversation.man_name }}</strong></p>
+  <ul>
+    {% for message in conversation.messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+  </ul>
+  <form method="post" action="/conversations/{{ conversation.id }}/messages">
+    <input type="text" name="message" placeholder="Votre message" required />
+    <button class="btn" type="submit">Envoyer</button>
+  </form>
+</div>
+{% endblock %}
