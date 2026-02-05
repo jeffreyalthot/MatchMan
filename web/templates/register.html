@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+  <h2>Inscription</h2>
+  {% if error %}<p class="error">{{ error }}</p>{% endif %}
+  <form method="post" action="/auth/register">
+    <label>Pseudo</label>
+    <input type="text" name="username" placeholder="Alice" required />
+    <label>Email</label>
+    <input type="email" name="email" placeholder="alice@example.com" required />
+    <label>Mot de passe</label>
+    <input type="password" name="password" minlength="6" required />
+    <label>Rôle</label>
+    <select name="role">
+      <option value="woman">Femme</option>
+      <option value="man">Homme</option>
+    </select>
+    <button class="btn" type="submit">Créer un compte</button>
+  </form>
+</div>
+{% endblock %}

@@ -19,8 +19,8 @@
     <p class="small">Goûts: {{ man.tastes }}</p>
     <form method="post" action="/women/match">
       <input type="hidden" name="man_id" value="{{ man.id }}" />
-      <input type="hidden" name="woman_id" value="7" />
-      <input type="hidden" name="woman_name" value="Alice" />
+      <input type="hidden" name="woman_id" value="{{ current_user.id }}" />
+      <input type="hidden" name="woman_name" value="{{ current_user.username }}" />
       <button class="btn" type="submit">Initier un match</button>
     </form>
   </div>

@@ -9,6 +9,19 @@
   <body>
     <header>
       <h1>MatchMan — MVP web</h1>
+      <nav>
+        <a href="/">Accueil</a>
+        {% if current_user %}
+          {% if current_user.role == 'woman' %}<a href="/women/discover">Découverte</a>{% endif %}
+          {% if current_user.role == 'man' %}<a href="/men/space">Espace homme</a>{% endif %}
+          <form method="post" action="/auth/logout" class="inline-form">
+            <button type="submit" class="link-btn">Déconnexion ({{ current_user.username }})</button>
+          </form>
+        {% else %}
+          <a href="/auth/login">Connexion</a>
+          <a href="/auth/register">Inscription</a>
+        {% endif %}
+      </nav>
     </header>
     <main>
       {% block content %}{% endblock %}
