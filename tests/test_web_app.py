@@ -1,3 +1,5 @@
+from uuid import uuid4
+
 from fastapi.testclient import TestClient
 
 from web.app import app
@@ -39,7 +41,7 @@ def test_register_persists_login_session() -> None:
         "/auth/register",
         data={
             "username": "Nina",
-            "email": "nina@example.com",
+            "email": f"nina-{uuid4().hex}@example.com",
             "password": "secret123",
             "role": "woman",
         },

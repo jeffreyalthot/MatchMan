@@ -7,6 +7,7 @@ MVP web Python d'une plateforme de rencontre où les profils hommes sont visible
 - Match initié uniquement côté femme.
 - Création automatique d'une conversation privée après match.
 - Espace homme avec aperçu des annonces/posts et statistiques simples.
+- Base de données SQLite branchée au serveur FastAPI via SQLAlchemy.
 
 ## Lancer en local
 ```bash
