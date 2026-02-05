@@ -1,2 +1,24 @@
 # MatchMan
-un site de rencontre ou l'homme est mis en avent plan pour etre matcher par des utilisatrice femme qui cherche un homme il i a subscriptions pour les femme mes pas les homme les homme quand il s'inscrive il complette leur profile photo bio description de eux et apres il attende qu'une femme veux se match avec lui
+
+MVP web Python d'une plateforme de rencontre où les profils hommes sont visibles et où les utilisatrices femmes initient le match.
+
+## Fonctionnalités livrées (alignées roadmap)
+- Espace femme avec recherche des profils hommes par ville.
+- Match initié uniquement côté femme.
+- Création automatique d'une conversation privée après match.
+- Espace homme avec aperçu des annonces/posts et statistiques simples.
+
+## Lancer en local
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn web.app:app --reload
+```
+
+Application: `http://127.0.0.1:8000`
+
+## Tests
+```bash
+pytest
+```
